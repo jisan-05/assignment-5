@@ -104,7 +104,7 @@ document
 
 // Link up with Blog Page
 document.getElementById("blog-page").addEventListener("click", function () {
-    window.location.href = "../blog.html";
+    window.location.href = "../blog/index.html";
 });
 // Link up for home page
 
