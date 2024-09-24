@@ -4,7 +4,7 @@ document
     .addEventListener("click", function (event) {
         event.preventDefault();
 
-        const textValue = document.getElementById("text-value-1");
+        const textValue = findTagById('text-value-1');
         const textValueNumber = parseFloat(textValue.innerText);
         const mainBalance = document.getElementById("mainBalance");
         const mainBalanceNumber = parseFloat(mainBalance.innerText);
@@ -104,7 +104,7 @@ document
 
 // Link up with Blog Page
 document.getElementById("blog-page").addEventListener("click", function () {
-    window.location.href = "../blog/index.html";
+    window.location.href = "../blog.html";
 });
 // Link up for home page
 
@@ -126,3 +126,5 @@ document.getElementById("change-btn-2").addEventListener("click", function () {
     const showDiv = document.getElementById("history");
     showDiv.classList.remove("hidden");
 });
+
+
