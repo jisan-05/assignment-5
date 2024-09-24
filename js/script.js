@@ -8,13 +8,15 @@ document
         const textValueNumber = parseFloat(textValue.innerText);
         const mainBalance = document.getElementById("mainBalance");
         const mainBalanceNumber = parseFloat(mainBalance.innerText);
-        const inputValue = parseFloat(document.getElementById("input-1").value);
+        const inputValue = getInputById('input-1');
 
         // input Validation
         if (inputValue < 0 || isNaN(inputValue)) {
             alert("Invalid Donate Amount");
             return;
         }
+
+        document.getElementById('my_modal_2').showModal();
 
         const upDateBalance = textValueNumber + inputValue;
         const upDateMainBalance = mainBalanceNumber - inputValue;
@@ -42,13 +44,15 @@ document
         const textValueNumber = parseFloat(textValue.innerText);
         const mainBalance = document.getElementById("mainBalance");
         const mainBalanceNumber = parseFloat(mainBalance.innerText);
-        const inputValue = parseFloat(document.getElementById("input-2").value);
+        const inputValue = getInputById('input-2');
 
         // input Validation
         if (inputValue < 0 || isNaN(inputValue)) {
             alert("Invalid Donate Amount");
             return;
         }
+
+        document.getElementById('my_modal_2').showModal();
 
         const upDateBalance = textValueNumber + inputValue;
         const upDateMainBalance = mainBalanceNumber - inputValue;
@@ -76,13 +80,15 @@ document
         const textValueNumber = parseFloat(textValue.innerText);
         const mainBalance = document.getElementById("mainBalance");
         const mainBalanceNumber = parseFloat(mainBalance.innerText);
-        const inputValue = parseFloat(document.getElementById("input-3").value);
+        const inputValue = getInputById('input-3');
 
         // input Validation
         if (inputValue < 0 || isNaN(inputValue)) {
             alert("Invalid Donate Amount");
             return;
         }
+
+        document.getElementById('my_modal_3').showModal();
 
         const upDateBalance = textValueNumber + inputValue;
         const upDateMainBalance = mainBalanceNumber - inputValue;
@@ -112,17 +118,23 @@ document.getElementById("blog-page").addEventListener("click", function () {
 const donationPart = document.getElementById("donation-part");
 const donationTab = document.getElementById("change-btn-1");
 const historyTab = document.getElementById("change-btn-2");
+const historyDiv = document.getElementById('history')
 
 document.getElementById("change-btn-1").addEventListener("click", function () {
     donationTab.classList.add("bg-[#B4F461]");
+    donationTab.classList.remove("bg-gray-100");
     donationPart.classList.remove("hidden");
     historyTab.classList.remove("bg-[#B4F461]");
+    historyTab.classList.add("bg-gray-100");
+    historyDiv.classList.add('hidden')
 });
 
 document.getElementById("change-btn-2").addEventListener("click", function () {
-    donationTab.classList.remove("bg-[#B4F461]");
+    donationTab.classList.remove("bg-[#B4F461]",);
+    donationTab.classList.add("bg-gray-100",);
     donationPart.classList.add("hidden");
     historyTab.classList.add("bg-[#B4F461]");
+    historyTab.classList.remove("bg-gray-100");
     const showDiv = document.getElementById("history");
     showDiv.classList.remove("hidden");
 });

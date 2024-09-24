@@ -3,4 +3,8 @@ function findTagById(id) {
     return textValue;
 }
 
-
+// Common Function input value 
+function getInputById(id){
+    const inputValue = parseFloat(document.getElementById(id).value);
+    return inputValue;
+}
